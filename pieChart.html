@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <div style='width: 200px'>
+  <canvas id='myChart'></canvas>
+  </div>
+  <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+      type:'doughnut',
+      data: {
+        labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Pink', 'Purple'],
+        datasets: [{
+          label: 'Favorite Colors',
+          data: [300,50,20,100, 150, 250, 241],
+          backgroundColor: [
+             'rgb(255,2,2)',
+             'rgb(240,151,50)',
+             'rgb(255,240,80)',
+              'rgb(27,255,2)',
+              'rgb(2,255,234)',
+              'rgb(240,50,202)',
+              'rgb(159,80,255)'
+            ],
+              hoverOffset: 1
+        }]
+      }
+    });
+  </script>
+  <div style='width: 200px'>
+  <canvas id='myChart2'></canvas>
+    <div style='width: 200px'>
+  <script>
+      var ctx = document.getElementById('myChart2');
+      var myChart = new Chart(ctx, {
+          type:'pie',
+          data: {
+              labels: ['Cats', 'Dogs', 'Fish','Bunnies', 'Axolotls', 'Birds'],
+              datasets: [{
+                  label: 'Favorite Animals',
+                  data: [300,50,200, 40, 62, 145],
+                  backgroundColor: [
+                      'rgb(155,227,165)',
+                      'rgb(195,117,117)',
+                      'rgb(255,196,0)',
+                      'rgb(145,33,145)',
+                      'rgb(248,145,255)',
+                      'rgb(131,131,251)'
+                  ],
+                  hoverOffset: 1
+              }]
+          }
+      });
+  </script>
+    <div style='width: 200px'>
+    <canvas id='myChart3'></canvas>
+    </div>
+        <script>
+            var ctz = document.getElementById('myChart3');
+            var myChart = new Chart(ctz, {
+                type:'polarArea',
+                data: {
+                    labels: [
+                        'Reading', 'Drawing', 'Running', 'Video Games', 'Music', 'Writing', 'Homework', 'Coding', 'Sleeping'
+                    ],
+                    datasets: [{
+                        label: 'Favorite Pass-times',
+                        data: [11, 10, 15, 3, 5, 2, 8, 14],
+                        backgroundColor: [
+                            'rgb(255, 100,130)',
+                            'rgb(80,190,190)',
+                            'rgb(255, 200,85)',
+                            'rgb(201,203,203)',
+                            'rgb(50,160,240)',
+                            'rgb(80,190,190)',
+                            'rgb(255, 200,85)',
+                            'rgb(201,203,203)',
+                        ]
+                    }]
+                },
+            });
+        </script>
+</body>
+</html>
